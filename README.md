@@ -15,7 +15,7 @@ S - Central cannon
 D - Right cannon
 
 #Gameplay
-The central cannon protects Atlantis from attacks. The alien ships need to destroy it to be able to hit the other buildings. Once all the buildings are destroyed, you lose the game.
+The central cannon protects Atlantis from attacks. The alien ships need to destroy it to be able to hit the other buildings. Once all the buildings are destroyed, you lose the game. A lot of liberties were taken with the gameplay to fit my tastes, inluding the enemy spawing rate (enemies are deployed at a fixed rate instead of deploying them in slots like the original game), the point system, the enemies speed, the espacing, etc. I also added an alternative control method since we are not restricted to one fire button anymore.
 
 For every 10.000 points you make, you will be able to have your main cannon plus a random building restored between alien waves.
 
