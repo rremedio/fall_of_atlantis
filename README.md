@@ -35,4 +35,8 @@ The aliens are attacking Atlantis. You control the last defenses keeping it from
 
 The original Atlantis, by Imagic, was the 9th best selling game in the Atari 2600 history.
 
+#Project discussion
+https://www.libgosu.org/cgi-bin/mwf/topic_show.pl?tid=1300
+
+#Thanks!
 Thanks to Julian Raschke for the Gosu game development library, Scott Lembcke, Beoran, John Mair (banisterfiend) and Shawn Anderson (shawn42) for the Chipmunk Ruby bindings and of course Imagic for Atlantis!
