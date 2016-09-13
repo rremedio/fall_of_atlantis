@@ -20,6 +20,9 @@ class Game < Window
 		@state=Title.new
 	end
 	
+	def game_over(points, level)
+		@state=Ending.new(points, level)
+	end
 	
 	def needs_cursor?
 		true

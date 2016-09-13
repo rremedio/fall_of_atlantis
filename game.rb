@@ -9,8 +9,8 @@ class Manager
 		@space = CP::Space.new #chipmunk space init
 		@space.damping = 1.0 #chipmunk config
 		@enemies=[]
-		@ttile=Image.new("img/ttile.png")
-		@ttile1=Image.new("img/ttile1.png")
+		@ttile=Image.new("img/ttile.png", tileable: true )
+		@ttile1=Image.new("img/ttile1.png", tileable: true)
 		@cannons=[]
 		for i in 0..2
 			@cannons<<Cannon.new(i, self)
@@ -48,7 +48,7 @@ class Manager
 		@exp_img=Image.load_tiles("img/explosion.png",44,12)
 		@en_img=[]
 		for i in 1..3
-			@en_img<<Image.new("img/en#{i}.png")
+			@en_img<<Image.new("img/en#{i}.png", retro: true)
 		end
 		spawn
 		@control=Kcontrol.new(control,self)
@@ -68,7 +68,11 @@ class Manager
 	
 	
 	def finish_flash
-		@flash=nil
+		if @locked==true
+			$window.game_over(@points, @level)
+		else
+			@flash=nil
+		end
 	end
 		
 	def spawn
@@ -357,7 +361,11 @@ class Manager
 			#end
 			$window.close 
 		else
-			@control.button_down(id) if @locked==false
+			if @locked==false
+				@control.button_down(id)
+			else
+				$window.game_over(@points, @level)
+			end
 		end
 		
 	end
@@ -380,20 +388,20 @@ class Tile
 		if type!="N"
 			case type
 				when "+"
-				@imgs=[Image.new("img/ttile.png"),Image.new("img/ttile2.png")]
+				@imgs=[Image.new("img/ttile.png", tileable: true),Image.new("img/ttile2.png", tileable: true)]
 				@img=@imgs[0]
 				@z=0
 				when "="
-				@img=Image.new("img/ttile1.png")
+				@img=Image.new("img/ttile1.png", tileable: true)
 				@z=3
 				when "#"
-				@img=Image.new("img/gtile.png")
+				@img=Image.new("img/gtile.png", tileable: true)
 				@z=3
 				when "."
-				@img=Image.new("img/wtile.png")
+				@img=Image.new("img/wtile.png", tileable: true)
 				@z=1
 				when "*"
-				@img=Image.new("img/ttile3.png")
+				@img=Image.new("img/ttile3.png", tileable: true)
 				@z=3
 			end
 		end

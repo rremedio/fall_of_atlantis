@@ -59,3 +59,31 @@ class Title
 	end
 	
 end
+
+class Ending
+	def initialize(points, level)
+		@font = Gosu::Font.new($window, "Arial", 50)
+		@font2 = Gosu::Font.new($window, "img/atari full.ttf", 20)
+		@p=points
+		@l=level
+	end
+	
+	def update
+		
+	end
+	
+	def draw
+		@font.draw("Atlantis has Fallen", 240, 250, 1, 1.0, 1.0, RED)
+		@font2.draw(@p.to_s, 250, 350, 1, 1.0, 1.0, YELLOW)
+		@font2.draw("Level #{@l}", 450, 370, 1, 1.0, 1.0, BLUE)
+	end
+	
+	def button_down(id)
+		if id==KbEscape
+			$window.close
+		else
+			$window.gotitle
+		end
+	end
+	
+end
