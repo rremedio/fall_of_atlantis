@@ -75,7 +75,7 @@ class Ending
 	def draw
 		@font.draw("Atlantis has Fallen", 240, 250, 1, 1.0, 1.0, RED)
 		@font2.draw(@p.to_s, 250, 350, 1, 1.0, 1.0, YELLOW)
-		@font2.draw("Level #{@l}", 450, 370, 1, 1.0, 1.0, BLUE)
+		@font2.draw("Level #{@l}", 470, 350, 1, 1.0, 1.0, BLUE)
 	end
 	
 	def button_down(id)
