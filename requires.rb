@@ -1,4 +1,3 @@
-#gem 'chipmunk', '~>5.3.4.5'
 require "gosu"
 require 'chipmunk'
 require_relative "./game.rb"
@@ -23,35 +22,3 @@ module CP
 	end
 
 end
-
-=begin
-	module Shape
-		class Circle
-			def object=(o)
-				@object=o
-			end
-			
-			def object
-				@object
-			end
-		end
-		class Poly
-			def object=(o)
-				@object=o
-			end
-			
-			def object
-				@object
-			end
-		end
-		class Segment
-			def object=(o)
-				@object=o
-			end
-			
-			def object
-				@object
-			end
-		end
-	end
-=end
