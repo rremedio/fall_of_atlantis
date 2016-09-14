@@ -4,6 +4,8 @@ A Ruby/Gosu/Chipmunk "remake" of the original Atari 2600 Atlantis.
 #Installation and usage
 You need Ruby (tested in v2.0) and the gems Gosu and Chipmunk installed. Then run "ruby main.rb" to launch the game. Tested only in Windows 10 64bits.
 
+If you are in Windows XP or newer you can also download executable files -> https://s3-sa-east-1.amazonaws.com/zygrunt/fall_of_atlantis.zip
+
 #Controls
 ##Classic version
 A, S, or D - Shoot
